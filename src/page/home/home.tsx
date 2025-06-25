@@ -1,21 +1,21 @@
 import { useState, useEffect } from "react";
-import Hero from '../../komponen/home/hero'
-import About from '../../komponen/home/About'
-import Work from '../../komponen/home/work'
-import Contact from '../../komponen/home/Contact'
-import Footer from '../../komponen/footer/footer'
-import NeonBeam from '../../komponen/neonBeam/neonBeam'
+import Hero from '../../komponen/home/hero';
+import About from '../../komponen/home/About';
+import Work from '../../komponen/home/work';
+import Contact from '../../komponen/home/Contact';
+import Footer from '../../komponen/footer/footer';
+import NeonBeam from '../../komponen/neonBeam/neonBeam';
 import LoadingBeam from '../../komponen/loader/loadingBeam';
 
 export default function Homepage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2600); // a bit longer than loading bar
+    const timer = setTimeout(() => setLoading(false), 2600);
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) return <LoadingBeam />;
+  if (loading) return <LoadingBeam mode="fullscreen" />;
 
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
@@ -34,6 +34,11 @@ export default function Homepage() {
         <Work />
         <Contact />
         <Footer />
+
+        {/* Decorative Beam Under Footer */}
+        {/* <div className="px-2"> */}
+          <LoadingBeam mode="inline" loop />
+        {/* </div> */}
       </main>
     </div>
   );
