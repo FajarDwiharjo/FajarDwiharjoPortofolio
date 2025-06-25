@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 
-export default function LoadingBeam() {
+type LoadingBeamProps = {
+  mode?: "fullscreen" | "inline";
+  loop?: boolean;
+};
+
+export default function LoadingBeam({ mode = "fullscreen", loop = false }: LoadingBeamProps) {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -12,38 +17,42 @@ export default function LoadingBeam() {
     const timer = setInterval(() => {
       currentStep++;
       setProgress((currentStep / totalSteps) * 100);
-      if (currentStep >= totalSteps) clearInterval(timer);
+
+      if (currentStep >= totalSteps) {
+        if (loop) {
+          currentStep = 0;
+          setProgress(0);
+        } else {
+          clearInterval(timer);
+        }
+      }
     }, interval);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [loop]);
+
+  const containerClasses =
+    mode === "fullscreen"
+      ? "fixed inset-0 bg-black z-50 flex items-center justify-center"
+      : "w-full relative overflow-hidden bg-transparent";
 
   return (
-    <div className="fixed inset-0 bg-black z-50 flex items-center justify-center">
-      <div className="relative w-full h-6 bg-transparent rounded-full overflow-hidden">
+    <div className={containerClasses}>
+      <div className="relative w-full h-12">
         {/* Outer Glow */}
         <div
-          className="absolute top-1/2 -translate-y-1/2 h-[16px] blur-[4px] bg-[#39FF14] transition-all duration-75"
-          style={{
-            width: `${progress}%`,
-            left: 0,
-          }}
+          className="absolute top-1/2 -translate-y-1/2 h-[12px] blur-[6px] bg-[#39FF14] transition-all duration-75"
+          style={{ width: `${progress}%`, left: 0 }}
         />
         {/* Inner Glow */}
         <div
-          className="absolute top-1/2 -translate-y-1/2 h-[8px] blur-[1px] bg-[#b3ffcc] transition-all duration-75"
-          style={{
-            width: `${progress}%`,
-            left: 0,
-          }}
+          className="absolute top-1/2 -translate-y-1/2 h-[8px] blur-[2px] bg-[#b3ffcc] transition-all duration-75"
+          style={{ width: `${progress}%`, left: 0 }}
         />
-        {/* Core Filament */}
+        {/* White Core */}
         <div
           className="absolute top-1/2 -translate-y-1/2 h-[4px] bg-white transition-all duration-75"
-          style={{
-            width: `${progress}%`,
-            left: 0,
-          }}
+          style={{ width: `${progress}%`, left: 0 }}
         />
       </div>
     </div>
