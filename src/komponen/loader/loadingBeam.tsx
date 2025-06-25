@@ -41,17 +41,17 @@ export default function LoadingBeam({ mode = "fullscreen", loop = false }: Loadi
       <div className="relative w-full h-12">
         {/* Outer Glow */}
         <div
-          className="absolute top-1/2 -translate-y-1/2 h-[12px] blur-[6px] bg-[#39FF14] transition-all duration-75"
+          className="absolute top-1/2 -translate-y-1/2 h-[20px] blur-[6px] bg-[#39FF14] transition-all duration-75"
           style={{ width: `${progress}%`, left: 0 }}
         />
         {/* Inner Glow */}
         <div
-          className="absolute top-1/2 -translate-y-1/2 h-[8px] blur-[2px] bg-[#b3ffcc] transition-all duration-75"
+          className="absolute top-1/2 -translate-y-1/2 h-[10px] blur-[2px] bg-[#b3ffcc] transition-all duration-75"
           style={{ width: `${progress}%`, left: 0 }}
         />
         {/* White Core */}
         <div
-          className="absolute top-1/2 -translate-y-1/2 h-[4px] bg-white transition-all duration-75"
+          className="absolute top-1/2 -translate-y-1/2 h-[5px] bg-white transition-all duration-75"
           style={{ width: `${progress}%`, left: 0 }}
         />
       </div>
