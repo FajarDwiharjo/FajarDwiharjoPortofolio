@@ -34,11 +34,7 @@ export default function Homepage() {
         <Work />
         <Contact />
         <Footer />
-
-        {/* Decorative Beam Under Footer */}
-        {/* <div className="px-2"> */}
-          <LoadingBeam mode="inline" loop />
-        {/* </div> */}
+        <LoadingBeam mode="inline" loop />
       </main>
     </div>
   );

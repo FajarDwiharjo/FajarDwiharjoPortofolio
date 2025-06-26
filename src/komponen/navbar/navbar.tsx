@@ -136,7 +136,6 @@ export default function NavBar() {
                 ))}
               </ul>
               <ul className="absolute bottom-5 flex flex-row gap-6 text-[#39FF14] text-xl">
-                {/* Add social links here */}
               </ul>
             </div>
           </div>
