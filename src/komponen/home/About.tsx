@@ -9,12 +9,15 @@ export default function About() {
 
           <div className="mt-6 mb-8">
             <p className="text-xl text-[#ccffe6] drop-shadow-[0_0_60px_black]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur.
+              I have a diverse background in the electronics and electrical industry,  
+              working across several disciplines to deliver high-quality technical support and solutions.  
+              My experience includes handling electrical panels and genset systems,  
+              ensuring their safe and efficient operation,  
+              as well as performing quality control on a variety of projects to meet strict standards.  
+              I have practiced manual drafting and chemical etching techniques for printed circuit board (PCB) manufacturing,  
+              and I am skilled in assembling and soldering electronic components on PCBs.  
+              This combination of hands-on assembly skills and thorough quality assurance  
+              allows me to contribute effectively to both the development and the reliability of complex electrical systems.
             </p>
           </div>
         </div>
