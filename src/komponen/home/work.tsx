@@ -81,7 +81,6 @@ export default function Work() {
               <ServiceLinkCard
                 title={item.title}
                 subtitle={item.subtitle}
-                href={item.href}
               />
             </div>
           ))}

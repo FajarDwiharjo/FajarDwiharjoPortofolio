@@ -85,7 +85,8 @@ const ImageCarousel: React.FC<CarouselProps> = ({
       style={{
         '--x': '50%',
         '--y': '50%',
-      }}
+      }as React.CSSProperties
+    }
       onMouseMove={(e) => {
         const container = e.currentTarget;
         const rect = container.getBoundingClientRect();

@@ -5,10 +5,9 @@ import arrowBlack from "../../assets/arrow_black.svg"
 interface ServiceLinkCardProps {
     title: string;
     subtitle: string;
-    href: string;
 }
   
-const ServiceLinkCard: React.FC<ServiceLinkCardProps> = ({ title, subtitle, href }) => {
+const ServiceLinkCard: React.FC<ServiceLinkCardProps> = ({ title, subtitle}) => {
     const [isHovered, setIsHovered] = useState(false);
     return (
             <div className="flex items-center justify-between">
@@ -18,7 +17,6 @@ const ServiceLinkCard: React.FC<ServiceLinkCardProps> = ({ title, subtitle, href
             </div>
             
             <a
-            href={href}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center w-[85.25px] h-[85.25px] gap-[10px] opacity-80 border border-[#39FF14] rounded-[180px] p-[20px] text-[#39FF14] hover:bg-[#39FF14] hover:text-black transition my-5 ml-5"
