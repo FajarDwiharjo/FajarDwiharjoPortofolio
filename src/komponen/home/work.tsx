@@ -69,7 +69,7 @@ export default function Work() {
       {/* Work Section */}
       <div className="container mx-auto flex flex-col md:flex-row justify-between">
         <div className="mb-8 md:mb-0 md:w-1/3 flex items-start">
-          <h2 className="text-3xl font-semibold text-[#39FF14]">Recent Work</h2>
+          <h2 className="text-3xl font-semibold text-[#39FF14]"> Work skills </h2>
         </div>
 
         <div className="md:w-2/3 flex flex-col gap-8">
