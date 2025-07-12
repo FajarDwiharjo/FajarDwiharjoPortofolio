@@ -1,3 +1,5 @@
+Hi! I’m an electrical engineer exploring the world of web development  one component and hook at a time. What started as a personal challenge to build a neon-themed website became a deep dive into React, Tailwind CSS, and frontend animation. With no formal background in UI/UX or styling, I learned by building, breaking, and iterating. I treat each component like a circuit  modular, reusable, and precise. My Medium article documents the journey, mistakes, and breakthroughs I encountered while transitioning from wires to websites. I'm always open to learning new tech, collaborating on creative builds, and sharing what I discover.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
