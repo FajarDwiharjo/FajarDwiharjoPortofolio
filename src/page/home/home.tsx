@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import Hero from '../../komponen/home/hero';
-import About from '../../komponen/home/About';
-import Work from '../../komponen/home/work';
-import Contact from '../../komponen/home/Contact';
-import Footer from '../../komponen/footer/footer';
-import NeonBeam from '../../komponen/neonBeam/neonBeam';
-import LoadingBeam from '../../komponen/loader/loadingBeam';
+import Hero from '../../component/home/hero';
+import About from '../../component/home/About';
+import Work from '../../component/home/work';
+import Contact from '../../component/home/Contact';
+import Footer from '../../component/footer/footer';
+import NeonBeam from '../../component/neonBeam/neonBeam';
+import LoadingBeam from '../../component/loader/loadingBeam';
 
 export default function Homepage() {
   const [loading, setLoading] = useState(true);
