@@ -17,6 +17,7 @@ export default function NavBar() {
     { id: "#about", label: "About" },
     { id: "#work", label: "Work" },
     { id: "#contact", label: "Contact" },
+    { id: "/feedback", label: "Feedback" }, // new item
   ];
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -38,7 +39,7 @@ export default function NavBar() {
         if (section) section.scrollIntoView({ behavior: "smooth" });
       }
     } else {
-      navigate(sectionId);
+      navigate(sectionId); // for "/feedback"
     }
   };
 
@@ -119,11 +120,12 @@ export default function NavBar() {
                 className="fixed top-[72px] right-[72px] z-40 p-2 bg-[#39FF14] text-black shadow-lg rounded-full"
               />
             </button>
+
             <div className="flex flex-col h-full my-10 ml-20 justify-between">
               <ul className="flex flex-col gap-6 text-[#39FF14] text-6xl mt-24 list-none">
                 {sections.map(({ id, label }) => (
                   <li key={id} className="flex flex-row gap-5 items-center">
-                    {activeSection === id && (
+                    {activeSection === id && id.startsWith("#") && (
                       <span className="text-4xl text-[#39FF14]">•</span>
                     )}
                     <button
@@ -134,8 +136,6 @@ export default function NavBar() {
                     </button>
                   </li>
                 ))}
-              </ul>
-              <ul className="absolute bottom-5 flex flex-row gap-6 text-[#39FF14] text-xl">
               </ul>
             </div>
           </div>
